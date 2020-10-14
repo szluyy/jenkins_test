@@ -25,7 +25,7 @@
     </Button>
 
     <Button
-        android:text="解析MP4"
+        android:text="解析MP411"
         android:id="@+id/btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
