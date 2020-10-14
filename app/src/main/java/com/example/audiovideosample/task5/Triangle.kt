@@ -23,7 +23,7 @@ class Triangle {
         }
     """
 
-    val fragmentShaderCode="""
+    val fragmentShaderCode1="""
         precision mediump float;
         uniform vec4 vColor;
         void main(){
