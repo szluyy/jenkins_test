@@ -4,7 +4,6 @@ import android.media.MediaCodec
 import android.media.MediaCodec.Callback
 import android.media.MediaExtractor
 import android.media.MediaFormat
-import android.media.MediaFormat.KEY_MIME
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
