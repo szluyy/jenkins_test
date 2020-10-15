@@ -37,4 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </Button>
+
+    <Button
+        android:text="AAC编解码"
+        android:id="@+id/btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
 </LinearLayout>

@@ -9,6 +9,7 @@ import com.example.audiovideosample.task2.Task2Activity
 import com.example.audiovideosample.task3.Task3Activity
 import com.example.audiovideosample.task4.Task4Activity
 import com.example.audiovideosample.task5.Task5Activity
+import com.example.audiovideosample.task7.Task7Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +39,11 @@ class MainActivity : AppCompatActivity() {
 
         btn5.setOnClickListener {
             var intent=Intent(this, Task5Activity::class.java)
+            startActivity(intent)
+        }
+
+        btn7.setOnClickListener {
+            var intent=Intent(this, Task7Activity::class.java)
             startActivity(intent)
         }
     }
