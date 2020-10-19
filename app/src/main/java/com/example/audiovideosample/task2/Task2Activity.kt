@@ -5,6 +5,7 @@ import android.media.*
 import android.media.AudioFormat.CHANNEL_OUT_MONO
 import android.media.AudioTrack.MODE_STREAM
 import android.os.Bundle
+import android.os.Environment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.audiovideosample.R
@@ -85,7 +86,7 @@ class Task2Activity :AppCompatActivity(){
                 MODE_STREAM
             )
             track.play()
-            var file = File(cacheDir, "hello.pcm")
+            var file = File( Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "first.pcm")
             var fis = FileInputStream(file)
             var buffer = ByteArray(minBufferSize)
             var len = -1

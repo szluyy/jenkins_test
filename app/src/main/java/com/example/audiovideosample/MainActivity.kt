@@ -1,15 +1,18 @@
 package com.example.audiovideosample
 
+import android.Manifest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.app.ActivityCompat
 import com.example.audiovideosample.task1.Task1Activity
 import com.example.audiovideosample.task2.Task2Activity
 import com.example.audiovideosample.task3.Task3Activity
 import com.example.audiovideosample.task4.Task4Activity
 import com.example.audiovideosample.task5.Task5Activity
 import com.example.audiovideosample.task7.Task7Activity
+import com.example.audiovideosample.task8.Task8Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,5 +49,11 @@ class MainActivity : AppCompatActivity() {
             var intent=Intent(this, Task7Activity::class.java)
             startActivity(intent)
         }
+
+        btn8.setOnClickListener {
+            var intent=Intent(this, Task8Activity::class.java)
+            startActivity(intent)
+        }
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE),1)
     }
 }
