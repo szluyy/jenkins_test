@@ -51,4 +51,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </Button>
+
+    <Button
+        android:text="音视频采集"
+        android:id="@+id/btn9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
 </LinearLayout>

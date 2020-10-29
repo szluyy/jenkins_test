@@ -13,6 +13,8 @@ import com.example.audiovideosample.task4.Task4Activity
 import com.example.audiovideosample.task5.Task5Activity
 import com.example.audiovideosample.task7.Task7Activity
 import com.example.audiovideosample.task8.Task8Activity
+import com.example.audiovideosample.task9.RecordActivity
+import com.example.audiovideosample.task9.Task9Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -54,6 +56,12 @@ class MainActivity : AppCompatActivity() {
             var intent=Intent(this, Task8Activity::class.java)
             startActivity(intent)
         }
-        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE),1)
+
+        btn9.setOnClickListener {
+//            var intent=Intent(this, Task9Activity::class.java)
+            var intent=Intent(this, RecordActivity::class.java)
+            startActivity(intent)
+        }
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA,Manifest.permission.RECORD_AUDIO),1)
     }
 }
