@@ -58,4 +58,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </Button>
+
+    <Button
+        android:text="视频播放"
+        android:id="@+id/btn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:text="GLSurfaceView"
+        android:id="@+id/btn12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
 </LinearLayout>

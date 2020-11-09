@@ -29,6 +29,7 @@ class  RecordView(context: Context?, attrs: AttributeSet?=null, defStyleAttr: In
     var isRecording=false
     var videoTrackIndex=-1
     val TAG="com.luyy"
+    var destFile=File(Environment.getExternalStorageDirectory(),"record.mp4")
     init {
         mSurface.layoutParams=LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT)
         mSurface.holder.addCallback(this)
@@ -39,6 +40,7 @@ class  RecordView(context: Context?, attrs: AttributeSet?=null, defStyleAttr: In
         params.addRule(CENTER_HORIZONTAL)
         addView(mBtn,params)
         mBtn.text="开始录制"
+        if(destFile.exists()) destFile.delete()
         mBtn.setOnClickListener {
             if(isRecording){
                 Camera2Utils.instance.stopRecord()
@@ -140,8 +142,7 @@ class  RecordView(context: Context?, attrs: AttributeSet?=null, defStyleAttr: In
         })
         startTime=0L
 
-        var destFile= File(Environment.getExternalStorageDirectory(),"record.mp4")
-        if(destFile.exists()) destFile.delete()
+
         mediaMuxer= MediaMuxer(destFile.absolutePath,MediaMuxer.OutputFormat.MUXER_OUTPUT_MPEG_4)
 
         mediaCodec.start()

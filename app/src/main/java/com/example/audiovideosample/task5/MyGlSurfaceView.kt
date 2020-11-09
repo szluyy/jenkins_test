@@ -9,6 +9,7 @@ import javax.microedition.khronos.opengles.GL10
 
 class MyGlSurfaceView(context: Context,attributeSet: AttributeSet):GLSurfaceView(context,attributeSet),GLSurfaceView.Renderer {
     lateinit var triangle:Triangle
+    lateinit var rectangle: Rectangle
     init {
         setEGLContextClientVersion(2)
         setRenderer(this)
@@ -17,17 +18,19 @@ class MyGlSurfaceView(context: Context,attributeSet: AttributeSet):GLSurfaceView
 
     override fun onDrawFrame(gl: GL10?) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT)
-        triangle.draw()
+//        triangle.draw()
+        rectangle.draw()
+
     }
 
     override fun onSurfaceChanged(gl: GL10?, width: Int, height: Int) {
-        GLES20.glViewport(0, 0, width, height)
+        GLES20.glViewport(0, 0, Math.min(width,height),  Math.min(width,height))
     }
 
     override fun onSurfaceCreated(gl: GL10?, config: EGLConfig?) {
        triangle= Triangle()
+       rectangle= Rectangle()
         GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f)
-
     }
 
    companion object{

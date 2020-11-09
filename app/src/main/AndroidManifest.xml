@@ -31,6 +31,8 @@
         <activity android:name=".task8.Task8Activity"/>
         <activity android:name=".task9.Task9Activity"/>
         <activity android:name=".task9.RecordActivity"/>
+        <activity android:name=".task10.Task10Activity"/>
+        <activity android:name=".task12.Task12Activity"/>
     </application>
 
 </manifest>

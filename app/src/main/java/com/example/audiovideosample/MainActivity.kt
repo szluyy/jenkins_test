@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.app.ActivityCompat
 import com.example.audiovideosample.task1.Task1Activity
+import com.example.audiovideosample.task10.Task10Activity
+import com.example.audiovideosample.task12.Task12Activity
 import com.example.audiovideosample.task2.Task2Activity
 import com.example.audiovideosample.task3.Task3Activity
 import com.example.audiovideosample.task4.Task4Activity
@@ -60,6 +62,16 @@ class MainActivity : AppCompatActivity() {
         btn9.setOnClickListener {
 //            var intent=Intent(this, Task9Activity::class.java)
             var intent=Intent(this, RecordActivity::class.java)
+            startActivity(intent)
+        }
+        
+        btn10.setOnClickListener {
+            var intent=Intent(this, Task10Activity::class.java)
+            startActivity(intent)
+        }
+
+        btn12.setOnClickListener {
+            var intent=Intent(this, Task12Activity::class.java)
             startActivity(intent)
         }
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA,Manifest.permission.RECORD_AUDIO),1)
